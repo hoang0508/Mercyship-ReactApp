@@ -5,15 +5,8 @@ import MercyshipContextProvider from "./context/MercyshipContext"
 function App() {
   return(
     <ApolloProvider>
-    <MercyshipContextProvider>
-      <ApolloClient>
-          <InMemoryCache>
-             <App>
+    <App/>
 
-             </App>
-          </InMemoryCache>
-        </ApolloClient>
-     </MercyshipContextProvider>
     </ApolloProvider>
 
   )
