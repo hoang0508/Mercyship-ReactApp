@@ -1,0 +1,28 @@
+@media screen and (min-width: 375px) {
+  .header {
+    background-color: var(--primary-color);
+    padding: 15px 21px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo {
+      width: 91px;
+      height: 41px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      gap: 0 15px;
+      span {
+        width: 15px;
+        height: 15px;
+        color: #fff;
+      }
+    }
+  }
+}

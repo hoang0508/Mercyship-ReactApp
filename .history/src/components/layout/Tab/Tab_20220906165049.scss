@@ -1,0 +1,12 @@
+.tab {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 300;
+  &-link {
+    color: #fff;
+    width: 50%;
+    text-align: center;
+    border-bottom: 3px solid var(--border-tab);
+  }
+}
