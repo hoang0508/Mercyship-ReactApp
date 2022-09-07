@@ -15,15 +15,10 @@ const HomePage = () => {
   const dataImages = dataArr.filter(
     (item) => item?.node?.acfMedia?.type === "image"
   );
-
-  const dataVideo = dataArr.filter(
-    (item) => item?.node?.acfMedia?.type === "video"
-  );
   console.log(
-    "🚀 ~ file: HomePage.js ~ line 22 ~ HomePage ~ dataVideo",
-    dataVideo
+    "🚀 ~ file: HomePage.js ~ line 16 ~ HomePage ~ dataImages",
+    dataImages
   );
-
   return (
     <Layout>
       {/* <img

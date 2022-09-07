@@ -8,20 +8,10 @@ const HomePage = () => {
 
   if (!data) return null;
   const dataArr = data?.posts?.edges;
-  const dataDocument = dataArr.filter(
-    (item) => item?.node?.acfMedia?.type === "document"
-  );
-
-  const dataImages = dataArr.filter(
-    (item) => item?.node?.acfMedia?.type === "image"
-  );
-
-  const dataVideo = dataArr.filter(
-    (item) => item?.node?.acfMedia?.type === "video"
-  );
+  const dataDocument = dataArr.map((item) => item);
   console.log(
-    "🚀 ~ file: HomePage.js ~ line 22 ~ HomePage ~ dataVideo",
-    dataVideo
+    "🚀 ~ file: HomePage.js ~ line 13 ~ HomePage ~ dataDocument",
+    dataDocument
   );
 
   return (

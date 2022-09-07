@@ -1,11 +1,12 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 // Tạo biến sử dụng context
 const MercyShipContext = createContext();
 
 // Hàm Provider context
 const MercyShipProvider = (props) => {
-  const value = {};
+  const [count, setCount] = useState(0);
+  const value = [count, setCount];
   return <MercyShipContext.Provider value={value}></MercyShipContext.Provider>;
 };
 
@@ -17,4 +18,4 @@ const useMercyShip = () => {
   return context;
 };
 
-export { MercyShipProvider, useMercyShip };
+export { MercyShipContext, useCount };

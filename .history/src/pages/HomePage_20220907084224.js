@@ -11,17 +11,9 @@ const HomePage = () => {
   const dataDocument = dataArr.filter(
     (item) => item?.node?.acfMedia?.type === "document"
   );
-
-  const dataImages = dataArr.filter(
-    (item) => item?.node?.acfMedia?.type === "image"
-  );
-
-  const dataVideo = dataArr.filter(
-    (item) => item?.node?.acfMedia?.type === "video"
-  );
   console.log(
-    "🚀 ~ file: HomePage.js ~ line 22 ~ HomePage ~ dataVideo",
-    dataVideo
+    "🚀 ~ file: HomePage.js ~ line 13 ~ HomePage ~ dataDocument",
+    dataDocument
   );
 
   return (
