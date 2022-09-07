@@ -3,9 +3,11 @@
     &--list {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      height: 100vh;
     }
     &--image {
       position: relative;
+      // width: 125px;
       height: 150px;
       img {
         width: 100%;

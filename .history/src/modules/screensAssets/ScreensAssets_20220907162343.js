@@ -5,10 +5,6 @@ import onErrorImg from "../../hooks/useErrorImg";
 import "./ScreensAssets.scss";
 const ScreensAssets = () => {
   const { dataAssest } = useMercyShip();
-  console.log(
-    "🚀 ~ file: ScreensAssets.js ~ line 8 ~ ScreensAssets ~ dataAssest",
-    dataAssest
-  );
 
   return (
     <div className="screen-assets--list">

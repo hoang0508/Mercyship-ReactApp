@@ -10,6 +10,8 @@ export const FilterImages = () => {
   const dataImages = dataArr.filter(
     (item) => item?.node?.acfMedia?.type === "image"
   );
+  // .map((item) => item?.node?.acfMedia?.image)
+  // .map((item) => item);
 
   return {
     dataImages,

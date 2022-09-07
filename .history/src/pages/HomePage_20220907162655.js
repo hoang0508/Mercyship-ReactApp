@@ -8,7 +8,10 @@ import FilterImages from "../utils/filter/FilterImages";
 import FilterVideo from "../utils/filter/FilterVideo";
 
 const HomePage = () => {
+  // const dataDocument = FilterDocument();
+
   // const dataImages = FilterImages();
+  // const dataVideo = FilterVideo();
 
   return (
     <Layout>
