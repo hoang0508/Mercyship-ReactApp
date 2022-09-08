@@ -1,0 +1,12 @@
+.input {
+  position: relative;
+  &-search {
+    width: 195px;
+    height: 29px;
+    background-color: var(--input-bgColor);
+    border-radius: 100rem;
+    &--close {
+      position: absolute;
+    }
+  }
+}

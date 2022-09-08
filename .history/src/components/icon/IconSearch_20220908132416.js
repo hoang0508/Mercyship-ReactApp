@@ -1,7 +1,7 @@
 import React from "react";
 import { useMercyShip } from "../../context/MercyshipContext";
 
-const IconSearch = () => {
+const IconSearch = ({ onClick = () => {} }) => {
   const { handleToggle } = useMercyShip();
   return (
     <span onClick={handleToggle}>

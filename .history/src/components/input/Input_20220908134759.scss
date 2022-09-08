@@ -1,0 +1,17 @@
+.input {
+  position: relative;
+  &-search {
+    width: 195px;
+    height: 29px;
+    background-color: var(--input-bgColor);
+    border-radius: 100rem;
+    &--close {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+
+      width: 20px;
+    }
+  }
+}

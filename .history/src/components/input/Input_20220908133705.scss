@@ -1,0 +1,7 @@
+.input {
+  background-color: --var(--input-bgColor);
+  &-search {
+    width: 195px;
+    height: 29px;
+  }
+}

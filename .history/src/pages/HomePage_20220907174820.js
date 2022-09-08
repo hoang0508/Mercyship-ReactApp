@@ -10,6 +10,10 @@ import FilterImages from "../utils/filter/FilterImages";
 import FilterVideo from "../utils/filter/FilterVideo";
 
 const HomePage = () => {
+  const { loading, error, data } = useQuery(getDataMercy);
+
+  // console.log(data);
+
   return (
     <Layout>
       <div className="square-layout">

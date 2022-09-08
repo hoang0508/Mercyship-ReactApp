@@ -19,6 +19,7 @@ const Header = () => {
           </div>
           <div className="header-icon">
             {valueToggle ? <Input /> : <IconSearch />}
+
             <IconConvert />
             <IconDots />
           </div>
