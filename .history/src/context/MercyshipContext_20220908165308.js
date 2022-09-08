@@ -22,7 +22,7 @@ const MercyShipProvider = ({ children, ...props }) => {
   };
 
   // isInput
-  const [isSearchView, setIsSearchView] = useState(true);
+  const [isSearchView, setSearchView] = useState(true);
 
   const value = {
     dataAssest,
@@ -30,7 +30,7 @@ const MercyShipProvider = ({ children, ...props }) => {
     valueToggle,
     handleToggle,
     isSearchView,
-    setIsSearchView,
+    setSearchView,
   };
   return (
     <MercyShipContext.Provider value={value}>

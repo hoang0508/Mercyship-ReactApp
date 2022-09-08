@@ -8,7 +8,7 @@ const HomePage = () => {
   const { setIsSearchView } = useMercyShip();
 
   useEffect(() => {
-    setIsSearchView(true);
+    setIsSearchView(false);
   }, [setIsSearchView]);
   return (
     <Layout>
