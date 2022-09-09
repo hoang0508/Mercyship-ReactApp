@@ -1,0 +1,22 @@
+@media screen and (min-width: 375px) {
+  .tab {
+    background-color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 300;
+    &-home {
+      display: flex;
+      justify-content: center;
+    }
+    &-link {
+      color: #fff;
+      width: 50%;
+      text-align: center;
+      display: inline-block;
+      padding-bottom: 3px;
+      &--active {
+        border-bottom: 4px solid var(--border-tab);
+        border-radius: 3px;
+      }
+    }
+  }
+}

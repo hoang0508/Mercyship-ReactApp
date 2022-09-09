@@ -1,0 +1,19 @@
+.bottom-layout {
+  background-color: var(--secondary-color);
+  padding: 20px 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  &--filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      width: 50px;
+      color: #fff;
+    }
+  }
+  .active-filter {
+    color: #f00;
+  }
+}
