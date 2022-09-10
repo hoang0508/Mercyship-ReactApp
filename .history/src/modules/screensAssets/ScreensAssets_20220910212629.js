@@ -37,7 +37,8 @@ const ScreensAssets = () => {
               )}
               {item?.node?.acfMedia?.type === "video" && (
                 <div className="screen-assets--image">
-                  <iframe
+                  <video controls src={item?.node?.acfMedia?.videoUrl}></video>
+                  {/* <iframe
                     width="140"
                     height="150"
                     src={`${
@@ -45,13 +46,13 @@ const ScreensAssets = () => {
                         ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
                             -11
                           )}`
-                        : "/Mercy-default.jpg"
+                        : ""
                     }`}
                     title="video"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                  />
+                  /> */}
                   <span className="thumb-text thumb-text--video">Video</span>
                 </div>
               )}

@@ -1,8 +1,10 @@
 import { useQuery } from "@apollo/client";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useMercyShip } from "../../../context/MercyshipContext";
 import { getDataMercy } from "../../../graphql-client/queries";
 import useActive from "../../../hooks/useAvtive";
+import HomePage from "../../../pages/HomePage";
 import { FilterDocument } from "../../../utils/filter/FilterDocuments";
 import FilterImages from "../../../utils/filter/FilterImages";
 import FilterVideo from "../../../utils/filter/FilterVideo";
@@ -60,7 +62,6 @@ const Bottom = ({ isFilter }) => {
       }
     } else {
       setDataAssets(data?.posts?.edges);
-      setTitleFilter("");
     }
   }, [isActive, prevIndex]);
   console.log(isActive);

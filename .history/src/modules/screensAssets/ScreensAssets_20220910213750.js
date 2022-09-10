@@ -42,7 +42,7 @@ const ScreensAssets = () => {
                     height="150"
                     src={`${
                       item?.node?.acfMedia?.videoUrl
-                        ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
+                        ? `https://www.youtube.com/watch/${item?.node?.acfMedia?.videoUrl?.slice(
                             -11
                           )}`
                         : "/Mercy-default.jpg"

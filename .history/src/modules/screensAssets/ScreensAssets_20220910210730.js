@@ -8,7 +8,7 @@ const ScreensAssets = () => {
 
   return (
     <>
-      {loading && !dataAssest && <div className="circle-loading loading"></div>}
+      {!loading && dataAssest && <div className="circle-loading "></div>}
       <div className="screen-assets--list">
         {!loading &&
           dataAssest &&
@@ -45,7 +45,7 @@ const ScreensAssets = () => {
                         ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
                             -11
                           )}`
-                        : "/Mercy-default.jpg"
+                        : ""
                     }`}
                     title="video"
                     frameBorder="0"

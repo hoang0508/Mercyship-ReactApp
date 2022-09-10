@@ -49,7 +49,7 @@ const ScreensAssets = () => {
                     }`}
                     title="video"
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    // allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
                   <span className="thumb-text thumb-text--video">Video</span>

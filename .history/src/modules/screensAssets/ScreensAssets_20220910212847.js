@@ -37,6 +37,12 @@ const ScreensAssets = () => {
               )}
               {item?.node?.acfMedia?.type === "video" && (
                 <div className="screen-assets--image">
+                  {/* <video
+                    controls
+                    autoPlay
+                    muted
+                    src={item?.node?.acfMedia?.videoUrl}
+                  ></video> */}
                   <iframe
                     width="140"
                     height="150"

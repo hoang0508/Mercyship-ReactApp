@@ -8,9 +8,7 @@ const CollectionItem = ({ data }) => {
       <div className="collection-list--content">
         <div className="collection-list--image">
           <img
-            src={
-              data?.acfMediaCategory?.image?.sourceUrl || "/Mercy-default.jpg"
-            }
+            src={data?.acfMediaCategory?.image?.sourceUrl}
             alt=""
             onError={(e) => onErrorImg(e)}
           />

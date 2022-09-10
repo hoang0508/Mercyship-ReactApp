@@ -1,3 +1,5 @@
+import defaultImg from "../../src/assets/images/pdf-image.jpg";
+
 export default function onErrorImg(e) {
   e.target.src = "/Mercy-default.jpg";
   e.target.style.objectFit = "cover";

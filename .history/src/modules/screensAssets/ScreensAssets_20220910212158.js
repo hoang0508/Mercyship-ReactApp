@@ -45,7 +45,7 @@ const ScreensAssets = () => {
                         ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
                             -11
                           )}`
-                        : "/Mercy-default.jpg"
+                        : ""
                     }`}
                     title="video"
                     frameBorder="0"
