@@ -13,8 +13,9 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
-          <Route path="/collections" element={<CollectionPage />}></Route>
-          <Route path="/collections/:id" element={<MediaListPage />}></Route>
+          <Route path="/collections" element={<CollectionPage />}>
+            <Route path="/mediaList/id" element={<MediaListPage />}></Route>
+          </Route>
         </Routes>
       </Suspense>
     </>

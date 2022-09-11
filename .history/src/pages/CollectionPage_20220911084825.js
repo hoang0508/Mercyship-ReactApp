@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import { useMercyShip } from "../context/MercyshipContext";
 import CategoriesList from "../modules/categories/CategoriesList";

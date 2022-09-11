@@ -21,6 +21,7 @@ const CollectionPage = () => {
           </div>
         </Layout>
       )}
+      <Outlet />
     </>
   );
 };

@@ -6,7 +6,7 @@ import onErrorImg from "../../hooks/useErrorImg";
 const CollectionItem = ({ data }) => {
   const navigate = useNavigate();
   const handleNavigateMedia = (id) => {
-    navigate(`/collections/${id}`);
+    navigate(`/mediaList/${id}`);
   };
   return (
     <>

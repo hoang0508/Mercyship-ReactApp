@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CollectionPage = lazy(() => import("./pages/CollectionPage"));
-const MediaListPage = lazy(() => import("./pages/MediaListPage"));
 
 function App() {
   return (
@@ -14,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/collections" element={<CollectionPage />}></Route>
-          <Route path="/collections/:id" element={<MediaListPage />}></Route>
+          {/* <Route path="/collections:id" element={<CollectionPage />}></Route> */}
         </Routes>
       </Suspense>
     </>

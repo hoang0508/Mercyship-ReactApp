@@ -33,6 +33,7 @@ const CollectionItem = ({ data }) => {
           <IconArrowRight></IconArrowRight>
         </div>
       </div>
+      <Outlet />
     </>
   );
 };

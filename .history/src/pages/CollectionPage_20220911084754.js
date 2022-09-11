@@ -19,6 +19,7 @@ const CollectionPage = () => {
           <div className="square-layout">
             <ScreenCollection></ScreenCollection>
           </div>
+          <Outlet />
         </Layout>
       )}
     </>
