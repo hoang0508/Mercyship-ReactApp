@@ -10,6 +10,7 @@ const Input = ({ className = "" }) => {
   // context
   const {
     handleToggle,
+    valueToggle,
     setDataAssets,
     inputTextSearch,
     setInputTextSearch,
@@ -20,22 +21,36 @@ const Input = ({ className = "" }) => {
   const handleChangeSearch = lodash.debounce((e) => {
     setInputTextSearch(e.target.value);
   }, 500);
-  const { data } = useQuery(getDataMercy);
-  const dataInputSearch =
+  const { data } = useQuery(getDataMercy, {
+    variables: {
+      where: {
+        search: inputTextSearch,
+      },
+    },
+  });
+
+  const demo =
     dataAssest &&
     dataAssest.length > 0 &&
-    dataAssest.filter((item) =>
-      item?.node?.title.toLowerCase().includes(inputTextSearch)
-    );
+    dataAssest.map((item) => item?.node?.title);
+  console.log("🚀 ~ file: Input.js ~ line 33 ~ Input ~ demo", demo);
+  const demo2 = [];
 
+  for (const item2 of demo) {
+    if (item2.includes("h")) {
+      demo2.push(item2);
+    }
+  }
+  console.log("🚀 ~ file: Input.js ~ line 35 ~ Input ~ demo2", demo2);
   // useEffect thay đổi component khi search
   useEffect(() => {
     if (inputTextSearch !== "") {
-      setDataAssets(dataInputSearch);
+      setDataAssets(data?.posts?.edges);
     } else {
       setDataAssets(data?.posts?.edges);
+      console.log("abc");
     }
-  }, [inputTextSearch]);
+  }, [data?.posts?.edges, inputTextSearch, setDataAssets]);
 
   // input ref focus
   const inputRef = useRef(null);
@@ -43,19 +58,15 @@ const Input = ({ className = "" }) => {
   const handleInputRef = () => {
     setInputClick("click");
   };
-
-  // kiểm tra click , click có thì focus
   useEffect(() => {
     if (inputClick === "click") {
       inputRef.current = inputRef.current.style.border = "1px solid #EB3349";
     }
   }, [inputClick]);
 
-  // close input
   const handleCloseInput = () => {
     handleToggle();
     setInputTextSearch("");
-    setDataAssets(data?.posts?.edges);
   };
 
   return (

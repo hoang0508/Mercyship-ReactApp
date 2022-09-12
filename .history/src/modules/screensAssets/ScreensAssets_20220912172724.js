@@ -54,21 +54,25 @@ const ScreensAssets = () => {
               )}
               {item?.node?.acfMedia?.type === "video" && (
                 <div className="screen-assets--image">
-                  <iframe
-                    width="140"
-                    height="150"
-                    src={`${
-                      item?.node?.acfMedia?.videoUrl
-                        ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
-                            -11
-                          )}`
-                        : "/Mercy-default.jpg"
-                    }`}
-                    title="video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  {item?.node?.acfMedia?.videoUrl ? (
+                    <iframe
+                      width="140"
+                      height="150"
+                      src={`${
+                        item?.node?.acfMedia?.videoUrl
+                          ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
+                              -11
+                            )}`
+                          : "/Mercy-default.jpg"
+                      }`}
+                      title="video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <span>Loading...</span>
+                  )}
                   <span className="thumb-text thumb-text--video">Video</span>
                 </div>
               )}

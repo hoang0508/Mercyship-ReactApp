@@ -43,15 +43,12 @@ const Input = ({ className = "" }) => {
   const handleInputRef = () => {
     setInputClick("click");
   };
-
-  // kiểm tra click , click có thì focus
   useEffect(() => {
     if (inputClick === "click") {
       inputRef.current = inputRef.current.style.border = "1px solid #EB3349";
     }
   }, [inputClick]);
 
-  // close input
   const handleCloseInput = () => {
     handleToggle();
     setInputTextSearch("");

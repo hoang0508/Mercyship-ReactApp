@@ -5,6 +5,10 @@ import onErrorImg from "../../hooks/useErrorImg";
 import "./ScreensAssets.scss";
 const ScreensAssets = () => {
   const { dataAssest, loading, inputTextSearch } = useMercyShip();
+  console.log(
+    "🚀 ~ file: ScreensAssets.js ~ line 8 ~ ScreensAssets ~ dataAssest",
+    dataAssest
+  );
   const [loadingSearch, setLoadingSearch] = useState(true);
   useEffect(() => {
     if (dataAssest && dataAssest.length > 0) {
@@ -54,21 +58,25 @@ const ScreensAssets = () => {
               )}
               {item?.node?.acfMedia?.type === "video" && (
                 <div className="screen-assets--image">
-                  <iframe
-                    width="140"
-                    height="150"
-                    src={`${
-                      item?.node?.acfMedia?.videoUrl
-                        ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
-                            -11
-                          )}`
-                        : "/Mercy-default.jpg"
-                    }`}
-                    title="video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                  {item?.node?.acfMedia?.videoUrl ? (
+                    <iframe
+                      width="140"
+                      height="150"
+                      src={`${
+                        item?.node?.acfMedia?.videoUrl
+                          ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
+                              -11
+                            )}`
+                          : "/Mercy-default.jpg"
+                      }`}
+                      title="video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <span>Loading...</span>
+                  )}
                   <span className="thumb-text thumb-text--video">Video</span>
                 </div>
               )}
