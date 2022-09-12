@@ -8,8 +8,9 @@ import lodash from "lodash";
 
 const Input = ({ className = "" }) => {
   // context
-  const { handleToggle, setDataAssets, inputTextSearch, setInputTextSearch } =
-    useMercyShip();
+  const { handleToggle, setDataAssets } = useMercyShip();
+  // state input search
+  const [inputTextSearch, setInputTextSearch] = useState("");
 
   // handleChangeSearch
   const handleChangeSearch = lodash.debounce((e) => {

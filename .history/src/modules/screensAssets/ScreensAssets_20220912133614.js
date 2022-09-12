@@ -1,31 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { v4 } from "uuid";
 import { useMercyShip } from "../../context/MercyshipContext";
 import onErrorImg from "../../hooks/useErrorImg";
 import "./ScreensAssets.scss";
+import lodash from "lodash";
 const ScreensAssets = () => {
-  const { dataAssest, loading, inputTextSearch } = useMercyShip();
-  const [loadingSearch, setLoadingSearch] = useState(true);
-  useEffect(() => {
-    if (dataAssest && dataAssest.length > 0) {
-      setLoadingSearch(false);
-    } else {
-      setLoadingSearch(true);
-    }
-  }, [dataAssest]);
+  const { dataAssest, loading } = useMercyShip();
+
   return (
     <>
-      {loading && dataAssest?.length === 0 && (
-        <div className="circle-loading loading"></div>
-      )}
-      {inputTextSearch && (
-        <>
-          {loadingSearch ? <div className="circle-loading loading"></div> : ""}
-        </>
-      )}
-      {dataAssest?.length === 0 && (
-        <span className="error-data">Không tìm thấy dữ liệu nào!!</span>
-      )}
+      {loading && !dataAssest && <div className="circle-loading loading"></div>}
       <div className="screen-assets--lis grid-list">
         {!loading &&
           dataAssest &&
@@ -54,24 +38,24 @@ const ScreensAssets = () => {
               )}
               {item?.node?.acfMedia?.type === "video" && (
                 <div className="screen-assets--image">
-                  {item?.node?.acfMedia?.videoUrl ? (
-                    <iframe
-                      width="140"
-                      height="150"
-                      src={`${
-                        item?.node?.acfMedia?.videoUrl
-                          ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
-                              -11
-                            )}`
-                          : "/Mercy-default.jpg"
-                      }`}
-                      title="video"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <span>Loading...</span>
+                  {setTimeout(
+                    lodash.debounce(() => {
+                      <iframe
+                        width="140"
+                        height="150"
+                        src={`${
+                          item?.node?.acfMedia?.videoUrl
+                            ? `https://www.youtube.com/embed/${item?.node?.acfMedia?.videoUrl?.slice(
+                                -11
+                              )}`
+                            : "/Mercy-default.jpg"
+                        }`}
+                        title="video"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />;
+                    }, 500)
                   )}
                   <span className="thumb-text thumb-text--video">Video</span>
                 </div>

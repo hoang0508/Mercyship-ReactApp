@@ -8,9 +8,9 @@ const ScreensAssets = () => {
   const [loadingSearch, setLoadingSearch] = useState(true);
   useEffect(() => {
     if (dataAssest && dataAssest.length > 0) {
-      setLoadingSearch(false);
-    } else {
       setLoadingSearch(true);
+    } else {
+      setLoadingSearch(false);
     }
   }, [dataAssest]);
   return (
@@ -18,11 +18,7 @@ const ScreensAssets = () => {
       {loading && dataAssest?.length === 0 && (
         <div className="circle-loading loading"></div>
       )}
-      {inputTextSearch && (
-        <>
-          {loadingSearch ? <div className="circle-loading loading"></div> : ""}
-        </>
-      )}
+      {inputTextSearch && <div className="circle-loading loading"></div>}
       {dataAssest?.length === 0 && (
         <span className="error-data">Không tìm thấy dữ liệu nào!!</span>
       )}

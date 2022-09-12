@@ -8,8 +8,9 @@ import lodash from "lodash";
 
 const Input = ({ className = "" }) => {
   // context
-  const { handleToggle, setDataAssets, inputTextSearch, setInputTextSearch } =
-    useMercyShip();
+  const { handleToggle, setDataAssets } = useMercyShip();
+  // state input search
+  const [inputTextSearch, setInputTextSearch] = useState("");
 
   // handleChangeSearch
   const handleChangeSearch = lodash.debounce((e) => {
@@ -28,7 +29,7 @@ const Input = ({ className = "" }) => {
     if (inputTextSearch !== "") {
       setDataAssets(data?.posts?.edges);
     } else {
-      setDataAssets(data?.posts?.edges);
+      // setDataAssets(data?.posts?.edges);
     }
   }, [data?.posts?.edges, inputTextSearch, setDataAssets]);
 

@@ -1,32 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { v4 } from "uuid";
 import { useMercyShip } from "../../context/MercyshipContext";
 import onErrorImg from "../../hooks/useErrorImg";
 import "./ScreensAssets.scss";
 const ScreensAssets = () => {
-  const { dataAssest, loading, inputTextSearch } = useMercyShip();
-  const [loadingSearch, setLoadingSearch] = useState(true);
-  useEffect(() => {
-    if (dataAssest && dataAssest.length > 0) {
-      setLoadingSearch(false);
-    } else {
-      setLoadingSearch(true);
-    }
-  }, [dataAssest]);
+  const { dataAssest, loading } = useMercyShip();
+  console.log(
+    "🚀 ~ file: ScreensAssets.js ~ line 8 ~ ScreensAssets ~ dataAssest",
+    dataAssest
+  );
+
   return (
     <>
-      {loading && dataAssest?.length === 0 && (
-        <div className="circle-loading loading"></div>
-      )}
-      {inputTextSearch && (
-        <>
-          {loadingSearch ? <div className="circle-loading loading"></div> : ""}
-        </>
-      )}
-      {dataAssest?.length === 0 && (
-        <span className="error-data">Không tìm thấy dữ liệu nào!!</span>
-      )}
+      {loading && !dataAssest && <div className="circle-loading loading"></div>}
       <div className="screen-assets--lis grid-list">
+        {dataAssest.length === 0 && <span>Không tìm thấy dữ liệu nào!!</span>}
         {!loading &&
           dataAssest &&
           dataAssest.length > 0 &&
