@@ -11,11 +11,11 @@ const TabCategory = () => {
   }, [setDataItemCategory, tabCategoryList]);
   if (!dataCategory) return <div className="circle-loading"></div>;
 
-  const handleClickTabCate = (item) => {
-    // const nameItemCate = tabCategoryList.filter(
-    //   (item) => item?.node?.name === name
-    // );
-    setDataItemCategory(item);
+  const handleClickTabCate = (name) => {
+    const nameItemCate = tabCategoryList.filter(
+      (item) => item?.node?.name === name
+    );
+    setDataItemCategory(nameItemCate);
   };
 
   return (
@@ -24,7 +24,10 @@ const TabCategory = () => {
         {tabCategoryList &&
           tabCategoryList.length > 0 &&
           tabCategoryList.map((item) => (
-            <span key={v4()} onClick={() => handleClickTabCate(item)}>
+            <span
+              key={v4()}
+              onClick={() => handleClickTabCate(item?.node?.name)}
+            >
               {item?.node?.name}
             </span>
           ))}

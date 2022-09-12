@@ -7,6 +7,10 @@ const TabCategory = () => {
   const tabCategoryList = dataCategory?.categories?.edges;
   useEffect(() => {
     const nameCate = tabCategoryList[0];
+    console.log(
+      "🚀 ~ file: TabCategory.js ~ line 10 ~ useEffect ~ nameCate",
+      nameCate
+    );
     setDataItemCategory(nameCate);
   }, [setDataItemCategory, tabCategoryList]);
   if (!dataCategory) return <div className="circle-loading"></div>;

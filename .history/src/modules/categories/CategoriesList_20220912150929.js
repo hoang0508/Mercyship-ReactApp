@@ -7,9 +7,19 @@ import "../screensCollections/./ScreenCollection.scss";
 
 const CategoriesList = () => {
   const { dataItemCategory } = useMercyShip();
+  console.log(
+    "🚀 ~ file: CategoriesList.js ~ line 10 ~ CategoriesList ~ dataItemCategory",
+    dataItemCategory
+  );
   return (
     <Layout isTabCategory>
-      <CollectionItem key={v4()} data={dataItemCategory?.node}></CollectionItem>
+      {/* {dataItemCategory &&
+        dataItemCategory.length > 0 &&
+        dataItemCategory.map((item) => (
+          <CollectionItem key={v4()} data={item?.node}></CollectionItem>
+        ))} */}
+
+      <CollectionItem key={v4()} data={dataItemCategory}></CollectionItem>
     </Layout>
   );
 };

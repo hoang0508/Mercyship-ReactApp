@@ -7,15 +7,19 @@ const TabCategory = () => {
   const tabCategoryList = dataCategory?.categories?.edges;
   useEffect(() => {
     const nameCate = tabCategoryList[0];
+    console.log(
+      "🚀 ~ file: TabCategory.js ~ line 10 ~ useEffect ~ nameCate",
+      nameCate
+    );
     setDataItemCategory(nameCate);
   }, [setDataItemCategory, tabCategoryList]);
   if (!dataCategory) return <div className="circle-loading"></div>;
 
-  const handleClickTabCate = (item) => {
-    // const nameItemCate = tabCategoryList.filter(
-    //   (item) => item?.node?.name === name
-    // );
-    setDataItemCategory(item);
+  const handleClickTabCate = (name) => {
+    const nameItemCate = tabCategoryList.filter(
+      (item) => item?.node?.name === name
+    );
+    setDataItemCategory(nameItemCate);
   };
 
   return (
@@ -24,7 +28,10 @@ const TabCategory = () => {
         {tabCategoryList &&
           tabCategoryList.length > 0 &&
           tabCategoryList.map((item) => (
-            <span key={v4()} onClick={() => handleClickTabCate(item)}>
+            <span
+              key={v4()}
+              onClick={() => handleClickTabCate(item?.node?.name)}
+            >
               {item?.node?.name}
             </span>
           ))}

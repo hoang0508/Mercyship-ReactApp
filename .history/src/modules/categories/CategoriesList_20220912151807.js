@@ -7,6 +7,10 @@ import "../screensCollections/./ScreenCollection.scss";
 
 const CategoriesList = () => {
   const { dataItemCategory } = useMercyShip();
+  console.log(
+    "🚀 ~ file: CategoriesList.js ~ line 10 ~ CategoriesList ~ dataItemCategory",
+    dataItemCategory
+  );
   return (
     <Layout isTabCategory>
       <CollectionItem key={v4()} data={dataItemCategory?.node}></CollectionItem>

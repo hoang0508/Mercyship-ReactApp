@@ -32,7 +32,6 @@ const Input = ({ className = "" }) => {
     }
   }, [data?.posts?.edges, inputTextSearch, setDataAssets]);
 
-  // input ref focus
   const inputRef = useRef(null);
   const [inputClick, setInputClick] = useState();
   const handleInputRef = () => {
@@ -40,7 +39,7 @@ const Input = ({ className = "" }) => {
   };
   useEffect(() => {
     if (inputClick === "click") {
-      inputRef.current = inputRef.current.style.border = "1px solid #EB3349";
+      inputRef.current = inputRef.current.style.border = "1px solid #";
     }
   }, [inputClick]);
   return (

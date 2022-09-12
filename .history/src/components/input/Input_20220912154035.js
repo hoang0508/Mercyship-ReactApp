@@ -32,17 +32,16 @@ const Input = ({ className = "" }) => {
     }
   }, [data?.posts?.edges, inputTextSearch, setDataAssets]);
 
-  // input ref focus
   const inputRef = useRef(null);
-  const [inputClick, setInputClick] = useState();
+  const [h, setH] = useState();
   const handleInputRef = () => {
-    setInputClick("click");
+    setH("click");
   };
   useEffect(() => {
-    if (inputClick === "click") {
-      inputRef.current = inputRef.current.style.border = "1px solid #EB3349";
+    if (h === "click") {
+      inputRef.current = inputRef.current.style.border = "1px solid #f00";
     }
-  }, [inputClick]);
+  }, [h]);
   return (
     <div className="input" ref={inputRef} onClick={() => handleInputRef()}>
       <input

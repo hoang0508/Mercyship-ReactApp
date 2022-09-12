@@ -9,7 +9,13 @@ const CategoriesList = () => {
   const { dataItemCategory } = useMercyShip();
   return (
     <Layout isTabCategory>
-      <CollectionItem key={v4()} data={dataItemCategory?.node}></CollectionItem>
+      {/* {dataItemCategory &&
+        dataItemCategory.length > 0 &&
+        dataItemCategory.map((item) => (
+          <CollectionItem key={v4()} data={item?.node}></CollectionItem>
+        ))} */}
+
+      <CollectionItem key={v4()} data={dataItemCategory}></CollectionItem>
     </Layout>
   );
 };

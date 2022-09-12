@@ -32,19 +32,12 @@ const Input = ({ className = "" }) => {
     }
   }, [data?.posts?.edges, inputTextSearch, setDataAssets]);
 
-  // input ref focus
   const inputRef = useRef(null);
-  const [inputClick, setInputClick] = useState();
-  const handleInputRef = () => {
-    setInputClick("click");
-  };
   useEffect(() => {
-    if (inputClick === "click") {
-      inputRef.current = inputRef.current.style.border = "1px solid #EB3349";
-    }
-  }, [inputClick]);
+    inputRef.current.focus();
+  }, []);
   return (
-    <div className="input" ref={inputRef} onClick={() => handleInputRef()}>
+    <div className="input" ref={inputRef}>
       <input
         type="text"
         className={`input-search ${className}`}

@@ -1,13 +1,12 @@
 .input {
   position: relative;
-  border-radius: 100rem;
-  overflow: hidden;
   cursor: pointer;
   &-search {
     width: 195px;
     height: 29px;
     background-color: var(--input-bgColor);
     color: #fff;
+    border-radius: 100rem;
     text-align: center;
     &--close {
       position: absolute;

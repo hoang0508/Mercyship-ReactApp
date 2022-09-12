@@ -12,6 +12,7 @@ const Header = () => {
   const navigate = useNavigate();
   const handleNavigatHome = () => {
     navigate(`/`);
+    console.log("ancv");
   };
   return (
     <>

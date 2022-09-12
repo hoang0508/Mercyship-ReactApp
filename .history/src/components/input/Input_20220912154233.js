@@ -32,7 +32,6 @@ const Input = ({ className = "" }) => {
     }
   }, [data?.posts?.edges, inputTextSearch, setDataAssets]);
 
-  // input ref focus
   const inputRef = useRef(null);
   const [inputClick, setInputClick] = useState();
   const handleInputRef = () => {
