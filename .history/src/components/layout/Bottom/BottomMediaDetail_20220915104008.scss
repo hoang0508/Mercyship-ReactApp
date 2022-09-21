@@ -1,0 +1,31 @@
+.bottom-media-detail-layout{
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
+    position: fixed;
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.icon-share{
+    
+    
+    justify-content: space-between;
+    width: 30px;
+      color: #fff;
+}
+.icon-download{
+    
+    
+    justify-content: space-between;
+    width: 50px;
+      color: #fff;
+}
+.icon-favorite{
+    
+    
+    justify-content: space-between;
+    width: 50px;
+      color: #fff;
+}

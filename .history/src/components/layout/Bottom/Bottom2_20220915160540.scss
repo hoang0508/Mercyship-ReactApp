@@ -1,0 +1,28 @@
+.bottom-layout {
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+
+  }
+
+  .bottom-layout-icon{
+    width: 50px;
+    height: 47px;
+    color: white;
+  }
+  .icon-share{
+    position: relative;
+    width: 50px;
+    right: 20px;
+    top: 5px;
+  }
+  .icon-download{
+    position: relative;
+    width: 50px;
+    left: 135px;
+    bottom: 50px;
+
+  }

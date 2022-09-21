@@ -1,0 +1,52 @@
+// .image{
+    
+//     display: flex;
+//     justify-content: center;
+//     width: 700px;
+//     height: 400px;
+//     align-content: space-between;
+// }
+
+// .title{
+    
+//     justify-content:center;
+//     align-items: center;
+//     align-content: space-between;
+//     font-family: Arial, Helvetica, sans-serif;
+//     text-align: center
+    
+    
+// }
+
+// .description{
+  
+//     justify-content:center;
+//     align-items: center;
+//     align-content: space-between;
+//     font-family: Arial, Helvetica, sans-serif;
+//     text-align: center
+// }
+.bottom-layout {
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    &--filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        width: 50px;
+        color: #fff;
+      }
+    }
+    .title-filter {
+      color: #fff;
+    }
+    .active-filter {
+      color: var(--primary-color);
+    }
+  }
+  

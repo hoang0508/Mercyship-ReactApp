@@ -1,0 +1,34 @@
+@media screen and (min-width: 375px) {
+    .tab-media-detail {
+      background-color: var(--primary-color);
+      font-size: 18px;
+      font-weight: 300;
+      color: #fff;
+      &-home {
+        display: flex;
+        justify-content: center;
+      }
+      &-link {
+        color: #fff;
+        width: 50%;
+        text-align: center;
+        display: inline-block;
+        padding-bottom: 3px;
+        &--active {
+          border-bottom: 4px solid var(--border-tab);
+          border-radius: 3px;
+        }
+      }
+     
+      }
+      &-category::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+      &-category > * {
+        scroll-snap-align: start;
+      }
+    }
+    
+  }
+  

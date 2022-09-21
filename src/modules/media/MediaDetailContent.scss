@@ -1,0 +1,19 @@
+
+.media-detail-content{
+    min-height: 100vh;
+
+}
+.image{
+
+    min-height: 100vh;
+        width: 100%;
+        object-fit:  cover;
+    
+}
+.title-and-description{
+    
+    position: absolute;
+   bottom: 50px;
+   left: 45px;
+    color: #fff;
+}

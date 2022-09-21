@@ -1,0 +1,25 @@
+
+.bottom-layout {
+    background-color: var(--secondary-color);
+    padding: 20px 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    &--filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        width: 30px;
+        color: #fff;
+      }
+    }
+    .title-filter {
+      color: #fff;
+    }
+    .active-filter {
+      color: var(--primary-color);
+    }
+  }
+  

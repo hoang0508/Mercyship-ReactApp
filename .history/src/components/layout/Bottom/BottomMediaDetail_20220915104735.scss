@@ -1,0 +1,15 @@
+.bottom-media-detail-layout {
+  background-color: var(--secondary-color);
+  padding: 20px 40px;
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.bottom-media-detail-icon {
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
